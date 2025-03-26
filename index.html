@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invito in Discoteca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .date-list {
+            list-style: none;
+            padding: 0;
+        }
+        .date-list li {
+            background: #222;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .location img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .link-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .link-button:hover {
+            background-color: #e6006d;
+        }
+        #fireworks-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.8/dist/index.umd.js"></script>
+</head>
+<body>
+    <div id="fireworks-container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('fireworks-container');
+            const fireworks = new Fireworks.default(container, {});
+            fireworks.start();
+            setTimeout(() => {
+                fireworks.stop();
+            }, 5000);
+        });
+    </script>
+    <div class="container">
+        <h1>Eventi in Discoteca</h1>
+        <ul class="date-list">
+            <li>Venerdì 11 Luglio 2025</li>
+            <li>Sabato 12 Luglio 2025</li>
+            <li>Domenica 13 Luglio 2025</li>
+        </ul>
+        <div class="location">
+            <img src="unnamed.jpg" alt="Discoteca">
+        </div>
+        <a href="https://www.google.com/search?q=villa+papeete+discoteca&rlz=1C1CHBF_enIT1146IT1146&oq=villapappete+disc&gs_lcrp=EgZjaHJvbWUqCAgBEAAYDRgeMgYIABBFGDkyCAgBEAAYDRgeMgcIAhAAGO8FMgoIAxAAGKIEGIkFMgoIBBAAGKIEGIkF0gEIODYzM2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8" class="link-button" target="_blank">Guarda il locale</a>
+    </div>
+</body>
+</html>
